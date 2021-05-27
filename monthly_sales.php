@@ -7,6 +7,7 @@
 <?php
  $year = date('Y');
  $sales = monthlySales($year);
+ $totalProfit = 0; $totalSales = 0;
 ?>
 <?php include_once('layouts/header.php'); ?>
 <div class="row">
@@ -37,16 +38,27 @@
             </thead>
            <tbody>
              <?php foreach ($sales as $sale):?>
+             <?php $totalProfit += $sale["profit"]; $totalSales += $sale["total_saleing_price"];?>
              <tr>
                <td class="text-center"><?php echo count_id();?></td>
                <td><?php echo remove_junk($sale['name']); ?></td>
-               <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
-               <td class="text-center"><?php echo remove_junk($sale['total_saleing_price']); ?></td>
+               <td class="text-center"><?php echo $sale['qty']; ?></td>
+               <td class="text-center"><?php echo remove_junk(number_format($sale['total_saleing_price'], 2)); ?></td>
                <td class="text-center"><?php echo remove_junk($sale['profit']); ?></td>
                <td class="text-center"><?php echo date("d/m/Y", strtotime ($sale['date'])); ?></td>
              </tr>
              <?php endforeach;?>
            </tbody>
+           <tfoot>
+            <tr>
+              <td class="text-center"><strong>Totales</strong></td>
+              <td class="text-center">-</td>
+              <td class="text-center">-</td>
+              <td class="text-center"><strong><?php echo number_format($totalSales, 2) ?></strong></td>
+              <td class="text-center"><strong><?php echo number_format($totalProfit, 2) ?></strong></td>
+              <td class="text-center">-</td>
+            </tr>
+          </tfoot>
          </table>
         </div>
       </div>

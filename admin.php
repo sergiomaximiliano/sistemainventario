@@ -89,8 +89,8 @@ $recent_sales    = find_recent_sale_added('5')
             <?php foreach ($products_sold as  $product_sold) : ?>
               <tr>
                 <td><?php echo remove_junk(first_character($product_sold['name'])); ?></td>
-                <td><?php echo (int) $product_sold['totalSold']; ?></td>
-                <td><?php echo (int) $product_sold['totalQty']; ?></td>
+                <td><?php echo $product_sold['totalSold']; ?></td>
+                <td><?php echo $product_sold['totalQty']; ?></td>
               </tr>
             <?php endforeach; ?>
           <tbody>
