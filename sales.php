@@ -33,6 +33,7 @@ $sales = find_all_sale();
                 <th> Nombre del producto </th>
                 <th class="text-center" style="width: 15%;"> Cantidad</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
+                <th class="text-center" style="width: 15%;"> Ganancia </th>
                 <th class="text-center" style="width: 15%;"> Fecha </th>
                 <th class="text-center" style="width: 100px;"> Acciones </th>
              </tr>
@@ -44,6 +45,7 @@ $sales = find_all_sale();
                <td><?php echo remove_junk($sale['name']); ?></td>
                <td class="text-center"><?php echo $sale['qty']; ?></td>
                <td class="text-center"><?php echo remove_junk($sale['price']); ?></td>
+               <td class="text-center"><?php echo remove_junk($sale['profit']); ?></td>
                <td class="text-center"><?php echo $sale['date']; ?></td>
                <td class="text-center">
                   <div class="btn-group">

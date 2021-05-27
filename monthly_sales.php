@@ -31,6 +31,7 @@
                 <th> Descripción </th>
                 <th class="text-center" style="width: 15%;"> Cantidad vendidas</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
+                <th class="text-center" style="width: 15%;"> Ganancia </th>
                 <th class="text-center" style="width: 15%;"> Fecha </th>
              </tr>
             </thead>
@@ -41,6 +42,7 @@
                <td><?php echo remove_junk($sale['name']); ?></td>
                <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
                <td class="text-center"><?php echo remove_junk($sale['total_saleing_price']); ?></td>
+               <td class="text-center"><?php echo remove_junk($sale['profit']); ?></td>
                <td class="text-center"><?php echo date("d/m/Y", strtotime ($sale['date'])); ?></td>
              </tr>
              <?php endforeach;?>

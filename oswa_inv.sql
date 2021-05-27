@@ -90,8 +90,9 @@ INSERT INTO `products` (`id`, `name`, `quantity`, `buy_price`, `sale_price`, `ca
 CREATE TABLE `sales` (
   `id` int(11) UNSIGNED NOT NULL,
   `product_id` int(11) UNSIGNED NOT NULL,
-  `qty` int(11) NOT NULL,
+  `qty` decimal(25,2) NOT NULL,
   `price` decimal(25,2) NOT NULL,
+  `profit` decimal(25,2) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
