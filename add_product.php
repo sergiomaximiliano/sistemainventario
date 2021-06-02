@@ -108,7 +108,7 @@
                      <span class="input-group-addon">
                        <i class="glyphicon glyphicon-usd"></i>
                      </span>
-                     <input type="number" class="form-control" name="buying-price" placeholder="Precio de compra">
+                     <input type="number" class="form-control" name="buying-price" placeholder="Precio de compra (Por kilo, litro o unidad)">
                      <span class="input-group-addon">.00</span>
                   </div>
                  </div>
@@ -117,7 +117,7 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-usd"></i>
                       </span>
-                      <input type="number" class="form-control" name="saleing-price" placeholder="Precio de venta">
+                      <input type="number" class="form-control" name="saleing-price" placeholder="Precio de venta (Por kilo, litro o unidad)">
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>

@@ -26,8 +26,8 @@
                 <th> Descripción </th>
                 <th class="text-center" style="width: 10%;"> Categoría </th>
                 <th class="text-center" style="width: 10%;"> Stock (kilos, litros o unidades) </th>
-                <th class="text-center" style="width: 10%;"> Precio de compra </th>
-                <th class="text-center" style="width: 10%;"> Precio de venta </th>
+                <th class="text-center" style="width: 10%;"> Precio de compra (Por kilo, litro o unidad) </th>
+                <th class="text-center" style="width: 10%;"> Precio de venta (Por kilo, litro o unidad)</th>
                 <th class="text-center" style="width: 10%;"> Agregado </th>
                 <th class="text-center" style="width: 100px;"> Acciones </th>
               </tr>
