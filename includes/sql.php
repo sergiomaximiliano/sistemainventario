@@ -249,9 +249,22 @@ function tableExists($table){
   /*--------------------------------------------------------------*/
   function update_product_qty($qty,$p_id){
     global $db;
-    $qty = (int) $qty;
+    // $qty = (int) $qty;
     $id  = (int)$p_id;
-    $sql = "UPDATE products SET quantity=quantity -'{$qty}' WHERE id = '{$id}'";
+
+    $sqlQty  = "SELECT *";
+    $sqlQty .= " FROM products";
+    $sqlQty .= " WHERE id = '{$id}'";
+
+    $products = find_by_sql($sqlQty);
+
+    foreach($products as $product){
+      $productQty = floatval($product['quantity']);
+    }
+
+    $newQuantity = $productQty - floatval($qty);
+
+    $sql = "UPDATE products SET quantity='{$newQuantity}' WHERE id = '{$id}'";
     $result = $db->query($sql);
     return($db->affected_rows() === 1 ? true : false);
 

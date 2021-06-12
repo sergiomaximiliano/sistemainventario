@@ -19,7 +19,7 @@ if(!$sale){
     validate_fields($req_fields);
         if(empty($errors)){
           $p_id      = $db->escape((int)$product['id']);
-          $s_qty     = $db->escape((int)$_POST['quantity']);
+          $s_qty     = $db->escape($_POST['quantity']);
           $s_total   = $db->escape($_POST['total']);
           $s_profit  = $db->escape($_POST['s_profit']);
           $date      = $db->escape($_POST['date']);
