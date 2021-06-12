@@ -100,7 +100,7 @@
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
                      </span>
-                     <input type="number" class="form-control" name="product-quantity" placeholder="Cantidad (Kilos, litros o unidades)">
+                     <input step=".01" min="0" type="number" class="form-control" name="product-quantity" placeholder="Cantidad (Kilos, litros o unidades)">
                   </div>
                  </div>
                  <div class="col-md-4">

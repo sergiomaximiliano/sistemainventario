@@ -107,7 +107,7 @@ if(!$product){
                       <span class="input-group-addon">
                        <i class="glyphicon glyphicon-shopping-cart"></i>
                       </span>
-                      <input placeholder="Cantidad (Kilos, litros o unidades)" type="number" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
+                      <input step=".01" min="0" placeholder="Cantidad (Kilos, litros o unidades)" type="number" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
                    </div>
                   </div>
                  </div>

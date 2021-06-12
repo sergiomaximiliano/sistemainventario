@@ -15,7 +15,7 @@ if (isset($_POST['add_sale'])) {
     $s_total   = $db->escape($_POST['total']);
     $date      = $db->escape($_POST['date']);
     $s_profit  = $db->escape($_POST['profit']);
-    $s_date    = make_date();
+    $s_date    = date("Y-m-d", strtotime($date));
 
     $sql  = "INSERT INTO sales (";
     $sql .= " product_id,qty,price,date, profit";
